@@ -1,0 +1,33 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: USUARIO-MICROSERVICE
+            uri: lb://USUARIO-MICROSERVICE
+            predicates:
+              - Path=/api/usuarios/**
+
+          - id: HOTEL-MICROSERVICE
+            uri: lb://HOTEL-MICROSERVICE
+            predicates:
+              - Path=/api/hoteles/**
+
+          - id: CALIFICACION-MICROSERVICE
+            uri: lb://CALIFICACION-MICROSERVICE
+            predicates:
+              - Path=/api/calificaciones/**
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true

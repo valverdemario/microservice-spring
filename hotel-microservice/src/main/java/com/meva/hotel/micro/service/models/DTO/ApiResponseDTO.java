@@ -1,7 +1,8 @@
-package com.meva.usuario.micro.service.models.DTO;
+package com.meva.hotel.micro.service.models.DTO;
 
 import lombok.*;
 import org.springframework.http.HttpStatus;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

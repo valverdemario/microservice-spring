@@ -1,0 +1,10 @@
+package com.meva.usuario.micro.service.models.DTO;
+
+import org.springframework.http.HttpStatus;
+
+public class ApiResponseDTO {
+
+    private String message;
+    private boolean success;
+    private HttpStatus status;
+}

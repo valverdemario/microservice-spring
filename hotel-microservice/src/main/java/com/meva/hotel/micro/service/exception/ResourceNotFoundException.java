@@ -1,4 +1,4 @@
-package com.meva.usuario.micro.service.exception;
+package com.meva.hotel.micro.service.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 

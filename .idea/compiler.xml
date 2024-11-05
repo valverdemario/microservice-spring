@@ -2,16 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="calificacion-microservice" />
+        <module name="config-server" />
+        <module name="registry-microservice" />
+        <module name="hotel-microservice" />
         <module name="usuario-microservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-server.main" target="17" />
+      <module name="config-server.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="calificacion-microservice" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="hotel-microservice" options="-parameters" />
+      <module name="registry-microservice" options="-parameters" />
       <module name="usuario-microservice" options="-parameters" />
     </option>
   </component>
